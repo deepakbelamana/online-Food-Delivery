@@ -1,0 +1,27 @@
+
+<div style="margin:15px;padding:20px">
+
+<mat-card>
+  <mat-card-title>About us</mat-card-title>
+
+  <mat-list>
+    <mat-list-item><p>This is an online food delivery system, where customers can order their food and it is
+        safely delivered to their location</p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Always feel free to contact us : ofd@ofd.com</mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+</mat-card>
+<mat-card style="margin-top: 20px;">
+    <div class="form-group" >
+        <label>
+           write your thoughts on improving our system:
+         </label> 
+           <textarea rows="2" cols="100" class="form-control" [(ngModel)]="feedback"></textarea> 
+         <div class="container" style="margin-top: 20px;">
+             <button type="submit" class="btn btn-primary" style="margin-left: 600px;" (click)="onsubmit()">Submit</button>
+         </div>
+       </div>
+</mat-card>
+</div>

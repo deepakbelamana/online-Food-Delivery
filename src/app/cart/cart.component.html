@@ -1,0 +1,23 @@
+<div class="container">      
+             <h1>cart items</h1>
+    
+      <p *ngFor="let item of orders"> {{item}}</p>
+  
+</div>
+
+<div class="container">
+   <select class='form-select' [(ngModel)]="deleteItem">
+       <option *ngFor="let items of orders" >{{items}}</option>
+   </select> 
+</div>
+<div class="container">
+   <button class="btn btn-dark"  (click)="removeFromCart()">remove the selected item </button>
+<div>
+<div class="container">
+   <label>go to home , to add new items</label>
+   <button class="btn btn-dark"> <a routerLink="/">home </a> </button>
+</div>
+
+<div class="container">
+    <button class="btn btn-dark"> <a routerLink="/payment"> go to payment</a> </button>
+ </div>

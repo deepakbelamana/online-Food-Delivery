@@ -1,0 +1,132 @@
+<body class="shadow p-3 mb-5 bg-white rounded">
+<div class="container">
+  <mat-tab-group>
+    <div class="row">
+   
+<mat-tab label="break fast" >
+  <div class="col">
+    <img src="../../assets/Breakfast recipes.JPG"  class="img-thumbnail" />
+</div>
+  <div class="col"> 
+    
+     <h1>Break fast</h1>
+    
+     <select class="form-select" [(ngModel)]="BreakFast">
+        <option>Dosa</option>
+        <option>idly</option>
+    
+        <option>Vada </option>
+        <option>Pongal</option>
+        <option>Poha </option>
+       <option>None</option>
+       </select>
+       <button class="btn btn-dark" (click)="BkFt()">Add to Cart </button>
+ 
+    </div>
+  </mat-tab>
+  <mat-tab label="Lunch"> 
+    <div class="col">
+        <img src="../../assets/lunch.jpg"  class="img-thumbnail" />
+        </div>
+      
+    <div class="col"> 
+        <h1>Lunch</h1>    
+        <select class="form-select" [(ngModel)]="Lunch">
+        <option>Chicken Biryani</option>
+        <option>South&North Thali</option>
+        <option>PaneerButterMasala with ButterNaan</option>
+        <option>Mushroom Fried Rice</option>
+        <option>Gongura Prawn </option>
+        <option>None</option>
+        </select>
+        <button class="btn btn-dark" (click)="Lun()">Add to Cart </button>
+        </div>
+      </mat-tab>
+    </div>
+    
+<div class="row"> 
+  <mat-tab label="Snacks"> 
+    <div class="col">
+    <img src="../../assets/SnackVariety_Lead.jpg"  class="img-thumbnail" />
+    </div>
+        <div class="col"> 
+            <h1>SnackUp</h1>
+            
+            <select class="form-select" [(ngModel)]="SnackUp">
+            <option>Samosa with Chutney</option>
+            <option>MOMOS (steam and fried)</option>
+            <option>Pav Bhaji</option>
+            <option>Noodles</option>
+            <option>Pani Puri </option>
+            <option>Mirchi Bajji</option>
+            <option>None</option>
+            </select>
+            <button class="btn btn-dark" (click)="SnckUp()">Add to Cart </button>
+            </div>
+          </mat-tab>
+          <mat-tab label="Dinner"> 
+            <div class="col">
+                <img src="../../assets/dinner.jpg" class="img-thumbnail" />
+                </div>
+             
+            <div class="col">
+                <h1>Dinner</h1>
+                
+                <select class="form-select" [(ngModel)]="Dinner">
+                <option>Roti with Sabji</option>
+                <option>Curd Rice</option>
+                <option> Thali</option>
+                <option>Biryani</option>
+                <option>None</option>
+                
+                
+                </select>
+                <button class="btn btn-dark" (click)="Din()">Add to Cart </button>
+                </div>
+            </mat-tab>
+          <mat-tab label="Bevarages">
+                <div class="col">
+                    <img src="../../assets/beve.jpg"  class="img-thumbnail"/>
+                    </div>
+                <div class="col"> 
+                    <h1>Beverages</h1>
+                    
+                    <select class='form-select' [(ngModel)]="Beverages">
+                    <option>Sprite</option>
+                    <option>ThumsUp</option>
+                    <option>Coca Cola</option>
+                    <option>None</option>
+                     </select>
+                    <button class="btn btn-dark" (click)="Bev()">Add to Cart </button>
+                    </div>
+                  </mat-tab>   
+  <mat-tab label=cart>
+            <div >      
+              <h1>cart items</h1>
+              <p *ngFor="let item of orders"> {{item}}</p>
+          </div>
+ 
+           <div>
+               <label>select items to remove from cart:</label>
+               <select class='form-select' [(ngModel)]="deleteItem">
+                 <option *ngFor="let items of orders" >{{items}}</option>
+               </select> 
+           </div>
+          <div>
+              <button class="btn btn-dark"  (click)="removeFromCart()">remove the selected item {{deleteItem}} </button>
+          </div>
+          <div>
+             <label>empty the cart :</label>
+             <button class="btn btn-dark"  (click)="EmptyCart()" style="margin: 20px;">clear cart</button>
+          </div>
+
+         <div>
+           <button class="btn btn-dark"> <a routerLink="/payment"> go to payment</a> </button>
+         </div>
+     
+    </mat-tab>
+
+  </div>
+</mat-tab-group>
+</div> 
+</body>

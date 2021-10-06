@@ -1,0 +1,18 @@
+<div  class="shadow p-3 mb-5 bg-white rounded" style="margin-top: 30px;padding:30px">
+     <form #loginform= "ngForm" (ngSubmit)=onsubmit(loginform.value)>
+    
+    <div class="form-group" style="padding:15px;">
+        <label>username</label>
+        <input type="text"  #username="ngModel" placeholder="username" class="form-control" name="username" required ngModel>
+     </div>
+    <div class="form-group" style="padding:15px;">
+        <label>password</label>
+        <input type="password" #password="ngModel"placeholder="enter the password" class="form-control" name="city" required ngModel pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$" minlength="8"/>
+    </div>
+
+    <div class="form-group" style="margin-top: 20px; margin-left: 600px;">
+        <button type="submit" mat-raised-button color="primary" >Login</button>
+    </div>
+    
+    </form>
+</div>

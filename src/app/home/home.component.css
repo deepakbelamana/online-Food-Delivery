@@ -1,0 +1,35 @@
+option{
+    height: 20px;
+    width:20px;
+}
+.row{
+    margin:20px;
+    padding:20px;
+}
+body{
+    text-align:justify;
+    margin-top: 20px;
+}
+.btn,.btn-dark{
+margin-top: 20px;
+
+}
+a
+{
+    text-decoration: none;
+    color:white;
+}
+.navbar,.navbar-dark,.bg-dark{
+    color:white;
+}
+.bi,.bi-cart-check-fill
+{
+    color:black;
+    float:right;
+}
+img
+{
+    width:200px;
+    height: 200px;
+    margin-top: 20px;
+}

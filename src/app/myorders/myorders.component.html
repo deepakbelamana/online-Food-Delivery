@@ -1,0 +1,29 @@
+
+<mat-card style="margin-top: 20px;">
+<div *ngIf="isloggedin" class="container">   
+    <div>
+      <p> login to check your orders </p>
+      <a routerLink="/login" class="btn btn-primary stretched-link">login</a>
+    </div>
+</div>
+<div *ngIf="loggedin" class="container" >
+<mat-card>
+  <mat-list>
+    <mat-list-item>
+        <h1> Hello {{name}}</h1>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-card-header>
+     <h1>My Orders</h1>
+    </mat-card-header>
+    <mat-card-title>order ID : {{orderid}}</mat-card-title>
+     <table class="table">
+         <tr *ngFor="let cartitems of cartItems">
+          <td>{{cartitems}}</td>
+          </tr>
+     </table>
+    <mat-divider></mat-divider>
+  </mat-list> 
+</mat-card>
+</div>
+</mat-card>
