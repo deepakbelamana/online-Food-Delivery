@@ -16,10 +16,14 @@
     <mat-card-header>
      <h1>My Orders</h1>
     </mat-card-header>
-    <mat-card-title>order ID : {{orderid}}</mat-card-title>
      <table class="table">
+      <tr>
+        <th scope="col">Order id</th>
+        <th scope="col">items</th>
+      </tr>
          <tr *ngFor="let cartitems of cartItems">
-          <td>{{cartitems}}</td>
+          <td scope="col"><h1>{{cartitems.id}}</h1></td>
+          <td scope="col"><P>{{cartitems.ordreditems}}</P></td>
           </tr>
      </table>
     <mat-divider></mat-divider>

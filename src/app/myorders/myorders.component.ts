@@ -11,7 +11,7 @@ export class MyordersComponent implements OnInit {
   isloggedin:boolean=false;
   loggedin:boolean=true;
   name:any;
-  cartItems:string[]=[];
+  cartItems:Array<{id:any,ordreditems:string[]}>=[{id:0,ordreditems:[""]}];
   orderid:number=0;
   constructor(private userdata:Userdata) { }
    
@@ -24,7 +24,8 @@ export class MyordersComponent implements OnInit {
     else{
            this.name=this.userdata.username;
            this.orderid=this.userdata.orderId; 
-           this.cartItems=this.userdata.items   
+           this.cartItems=this.userdata.items; 
+           console.log(this.cartItems) 
     }
   }
   

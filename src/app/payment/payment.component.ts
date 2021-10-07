@@ -18,10 +18,11 @@ export class PaymentComponent implements OnInit {
   paymentSubmit()
   {
     alert("payment successful...!");
-    this.displaydiv=!this.displaydiv;
-    this.userdata.items=[this.cartitems.breakfast,this.cartitems.lunch,this.cartitems.bevarages,this.cartitems.dinner,this.cartitems.snackup];
+    this.displaydiv=!this.displaydiv;;
     this.userdata.orderId=Math.ceil(Math.random()*10000);
     console.log(this.userdata.orderId);
+    this.userdata.items=[{id:this.userdata.orderId,
+                          ordreditems:[this.cartitems.bevarages,this.cartitems.breakfast,this.cartitems.dinner,this.cartitems.lunch,this.cartitems.snackup]},...this.userdata.items]
     this.router.navigate(['/userdata'])
   }
 }
