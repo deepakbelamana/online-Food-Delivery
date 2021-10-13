@@ -22,6 +22,8 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import { MyordersComponent } from './myorders/myorders.component';
 import { Userdata } from './userdata';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {ToastrModule} from 'ngx-toastr'
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { Userdata } from './userdata';
     MatFormFieldModule,
     MatIconModule,MatCardModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatSnackBarModule
+    
     
   ],
   providers: [Cartitems,Userdata],
