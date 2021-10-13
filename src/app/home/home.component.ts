@@ -91,6 +91,11 @@ removeFromCart()
       this.orders.splice(this.index,1);
       this.items.cartlength--;
       this.deleteItem=" ";
+      this.snck_bar.open('item removed the cart..!','dismiss',{
+        duration:1500,
+        panelClass: ['blue-snackbar'],
+        verticalPosition:'top'
+      })
     }
 EmptyCart()
 {
